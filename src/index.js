@@ -33,9 +33,9 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
     "copyright": "Copyright Great Idea! 2021",
   },
   "images": {
-    "logo-img": "mocks/img/logo.png",
-    "cta-img": "mocks/img/cta.png",
-    "accent-img": "mocks/img/accent.png",
+    "logo-img": "http://localhost:9000/img/logo.png",
+    "cta-img": "http://localhost:9000/img/cta.png",
+    "accent-img": "http://localhost:9000/img/accent.png",
   },
 };
 
@@ -52,7 +52,7 @@ navLinks[3].textContent = siteContent['nav']['nav-item-4'];
 navLinks[4].textContent = siteContent['nav']['nav-item-5'];
 navLinks[5].textContent = siteContent['nav']['nav-item-6'];
 
-
+navLinks.forEach(n => n.className = 'italic');
 
 //cta
 const ctaH1 = document.querySelector('.cta-text h1');
@@ -62,16 +62,16 @@ const ctaButton = document.querySelector('.cta-text button');
 ctaButton.textContent = siteContent['cta']['button'];
 
 //main content
-const featuresH4 = document.querySelector('');
+const featuresH4 = document.querySelector('.text-content:nth-of-type(1) h4');
 featuresH4.textContent = siteContent['main-content']['features-h4'];
 
-const featuresContent = document.querySelector('');
+const featuresContent = document.querySelector('.text-content:nth-of-type(1) p');
 featuresContent.textContent = siteContent['main-content']['features-content'];
 
-const aboutH4 = document.querySelector('');
+const aboutH4 = document.querySelector('.text-content:nth-of-type(2) h4');
 aboutH4.textContent = siteContent['main-content']['about-h4'];
 
-const aboutContent = document.querySelector('');
+const aboutContent = document.querySelector('.text-content:nth-of-type(2) p');
 aboutContent.textContent = siteContent['main-content']['about-content'];
 
 const servicesH4 = document.querySelector('');
@@ -107,12 +107,12 @@ const footerNav = document.querySelector('footer nav a');
 footerNav.className = 'bold';
 
 //images
-const logoImg = document.querySelector('');
+const logo = document.querySelector('#logo-img');
+logo.src = "http://localhost:9000/img/logo.png";
+
 
 const ctaImg = document.querySelector('');
 
 const accentImg = document.querySelector('');
 
-//general 
-const italicNav = document.querySelectorAll('nav a');
-italicNav.className = 'italic';
+//general
