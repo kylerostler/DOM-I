@@ -62,57 +62,49 @@ const ctaButton = document.querySelector('.cta-text button');
 ctaButton.textContent = siteContent['cta']['button'];
 
 //main content
-const featuresH4 = document.querySelector('.text-content:nth-of-type(1) h4');
-featuresH4.textContent = siteContent['main-content']['features-h4'];
+const mainContentTitles = document.querySelectorAll('.text-content h4');
+const mainContentTitlesArray = Array.from(mainContentTitles);
 
-const featuresContent = document.querySelector('.text-content:nth-of-type(1) p');
-featuresContent.textContent = siteContent['main-content']['features-content'];
+const mainContentBody = document.querySelectorAll('.text-content p');
+const mainContentBodyArray = Array.from(mainContentBody);
 
-const aboutH4 = document.querySelector('.text-content:nth-of-type(2) h4');
-aboutH4.textContent = siteContent['main-content']['about-h4'];
+mainContentTitlesArray[0].textContent = siteContent['main-content']['features-h4'];
+mainContentTitlesArray[1].textContent = siteContent['main-content']['about-h4'];
+mainContentTitlesArray[2].textContent = siteContent['main-content']['services-h4'];
+mainContentTitlesArray[3].textContent = siteContent['main-content']['product-h4'];
+mainContentTitlesArray[4].textContent = siteContent['main-content']['vision-h4'];
 
-const aboutContent = document.querySelector('.text-content:nth-of-type(2) p');
-aboutContent.textContent = siteContent['main-content']['about-content'];
+mainContentBodyArray[0].textContent = siteContent['main-content']['features-content'];
+mainContentBodyArray[1].textContent = siteContent['main-content']['about-content'];
+mainContentBodyArray[2].textContent = siteContent['main-content']['services-content'];
+mainContentBodyArray[3].textContent = siteContent['main-content']['product-content'];
+mainContentBodyArray[4].textContent = siteContent['main-content']['vision-content']
 
-const servicesH4 = document.querySelector('');
-servicesH4.textContent = siteContent['main-content']['services-h4'];
-
-const servicesContent = document.querySelector('');
-servicesContent.textContent = siteContent['main-content']['services-content'];
-
-const productH4 = document.querySelector('');
-productH4.textContent = siteContent['main-content']['product-h4'];
-
-const productContent = document.querySelector('');
-productContent.textContent = siteContent['main-content']['product-content'];
-
-const visionH4 = document.querySelector('');
-visionH4.textContent = siteContent['main-content']['vision-h4'];
-
-const visionContent = document.querySelector('');
-visionContent.textContent = siteContent['main-content']['vision-content'];
 //contact
-const contactH4 = document.querySelector('');
+const contactTitle = document.querySelector('.contact h4');
+contactTitle.textContent = siteContent['contact']['contact-h4'];
 
-const address = document.querySelector('');
+const contactNav = document.querySelectorAll('.contact p');
+const contactNavArray = Array.from(contactNav);
 
-const phone = document.querySelector('');
+contactNavArray[0].textContent = siteContent['contact']['address'];
+contactNavArray[1].textContent = siteContent['contact']['phone'];
+contactNavArray[2].textContent = siteContent['contact']['email']
 
-const email = document.querySelector('');
 
 //footer
-const copyright = document.querySelector('');
-
-const footerNav = document.querySelector('footer nav a');
-footerNav.className = 'bold';
+const footerText = document.querySelector('footer a');
+footerText.textContent = siteContent['footer']['copyright'];
+footerText.className = 'bold';
 
 //images
-const logo = document.querySelector('#logo-img');
-logo.src = "http://localhost:9000/img/logo.png";
+const logoImg = document.querySelector('#logo-img');
+logoImg.src = siteContent['images']['logo-img'];
+
+const ctaImg = document.querySelector('.cta img');
+ctaImg.src = siteContent['images']['cta-img'];
+
+const accentImg = document.querySelector('.middle-img');
+accentImg.src = siteContent['images']['accent-img'];
 
 
-const ctaImg = document.querySelector('');
-
-const accentImg = document.querySelector('');
-
-//general
